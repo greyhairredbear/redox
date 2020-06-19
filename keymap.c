@@ -6,6 +6,12 @@
 #define MEDIA 3
 #define NUMBLOCK 4
 
+#define LT_NUM_GRV LT(NUMBLOCK, KC_GRV)
+#define JB_DOC LCTL(KC_1)
+#define JB_FUS LALT(KC_F7)
+#define COMM LCTL(KC_SLSH)
+#define JB_REN LSFT(KC_F6)
+
 /**
 
  */
@@ -25,17 +31,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------+------|           |------+------+------+------+------+------+--------|
  * |   TAB  |   q  |   w  |   e  |   r  |   t  |      |           |      |   y  |   u  |   i  |   o  |   p  |    [   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |  CTL+1 |   a  |   s  |   d  |   f  |   g  | BSpc |           | BSpc |   h  |   j  |   k  |   l  |   ;  |    '   |
+ * | JB_DOC |   a  |   s  |   d  |   f  |   g  | BSpc |           | BSpc |   h  |   j  |   k  |   l  |   ;  |    '   |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * | ALT+F7 |   z  |   x  |   c  |   v  |   b  |      |           |      |   n  |   m  |   ,  |   .  |   /  |    ]   |
+ * | JB_FUS |   z  |   x  |   c  |   v  |   b  |      |           |      |   n  |   m  |   ,  |   .  |   /  |    ]   |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | CTL+/| SH+F6|  DEL |   `  | LCTL |                                       | Space|   ◀  |   ▲  |   ▼  |   ▶  |
+ *   | CTL+/| SH+F6|  DEL |LT(#,`)| LCTL|                                       | Space|   ◀  |   ▲  |   ▼  |   ▶  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
- *                                        | LALT | LGUI |       | t~L3 |  NUM |
+ *                                        | tMODS| LGUI |       |tMEDIA| RALT |
  *                                        |------+------|       |------+------+
- *                                        |      |  ~L2 |       |  ~L1 |      |
- *                                        | LSFT | MODS |       |SYMBOL|  RET |
+ *                                        |      |      |       |  mL1 |      |
+ *                                        | LSFT | LALT |       |SYMBOL|  RET |
  *                                        |      |      |       |      |      |
  *                                        --------------'       `--------------
  */
@@ -45,11 +51,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐                           ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
         KC_TAB,     KC_Q,     KC_W,     KC_E,     KC_R,     KC_T,   KC_EQL,                              KC_BSLS,     KC_Y,     KC_U,     KC_I,     KC_O,     KC_P,  KC_LBRC,
   //├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                           ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-    LCTL(KC_1),     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,  KC_BSPC,                              KC_BSPC,     KC_H,     KC_J,     KC_K,     KC_L,  KC_SCLN,  KC_QUOT, 
+        JB_DOC,     KC_A,     KC_S,     KC_D,     KC_F,     KC_G,  KC_BSPC,                              KC_BSPC,     KC_H,     KC_J,     KC_K,     KC_L,  KC_SCLN,  KC_QUOT, 
   //├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐       ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-  LALT(KC_F7),      KC_Z,     KC_X,     KC_C,     KC_V,     KC_B,  KC_LALT,  KC_LGUI,       TG(MEDIA),TG(NUMBLOCK),   KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,  KC_RBRC,
+        JB_FUS,     KC_Z,     KC_X,     KC_C,     KC_V,     KC_B, TG(MODS),  KC_LGUI,       TG(MEDIA),    KC_RALT,   KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,  KC_RBRC,
   //├─────────┼─────────┼─────────┼─────────┼────┬────┴────┬────┼─────────┼─────────┤       ├─────────┼─────────┼───┬─────┴───┬─────┼─────────┼─────────┼─────────┼─────────┤
-LCTL(KC_SLSH),LSFT(KC_F6),  KC_DEL,   KC_GRV,       KC_LCTL,       KC_LSFT, TG(MODS),      MO(SYMBOLS),   KC_ENT,       KC_SPC,        KC_LEFT,    KC_UP,  KC_DOWN,  KC_RGHT
+          COMM,   JB_REN,   KC_DEL,LT_NUM_GRV,      KC_LCTL,       KC_LSFT,  KC_LALT,      MO(SYMBOLS),   KC_ENT,       KC_SPC,        KC_LEFT,    KC_UP,  KC_DOWN,  KC_RGHT
   //└─────────┴─────────┴─────────┴─────────┘    └─────────┘    └─────────┴─────────┘       └─────────┴─────────┘   └─────────┘     └─────────┴─────────┴─────────┴─────────┘
   ),
 
