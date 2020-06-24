@@ -7,6 +7,7 @@
 #define NUMBLOCK 4
 
 #define LT_NUM_GRV LT(NUMBLOCK, KC_GRV)
+#define LT_MOD_SPC LT(MODS, KC_SPC)
 #define JB_DOC LCTL(KC_1)
 #define JB_FUS LALT(KC_F7)
 #define COMM LCTL(KC_SLSH)
@@ -35,7 +36,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * | JB_FUS |   z  |   x  |   c  |   v  |   b  |      |           |      |   n  |   m  |   ,  |   .  |   /  |    ]   |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
- *   | CTL+/| SH+F6|  DEL |LT(#,`)| LCTL|                                       | Space|   ◀  |   ▲  |   ▼  |   ▶  |
+ *   | CTL+/| SH+F6|  DEL |LT(#,`)| LCTL|                                |LT(MODS, SPC)|   ◀  |   ▲  |   ▼  |   ▶  |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,-------------.       ,-------------.
  *                                        | tMODS| LGUI |       |tMEDIA| RALT |
@@ -55,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐       ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
         JB_FUS,     KC_Z,     KC_X,     KC_C,     KC_V,     KC_B, TG(MODS),  KC_LGUI,       TG(MEDIA),    KC_RALT,   KC_N,     KC_M,  KC_COMM,   KC_DOT,  KC_SLSH,  KC_RBRC,
   //├─────────┼─────────┼─────────┼─────────┼────┬────┴────┬────┼─────────┼─────────┤       ├─────────┼─────────┼───┬─────┴───┬─────┼─────────┼─────────┼─────────┼─────────┤
-          COMM,   JB_REN,   KC_DEL,LT_NUM_GRV,      KC_LCTL,       KC_LSFT,  KC_LALT,      MO(SYMBOLS),   KC_ENT,       KC_SPC,        KC_LEFT,    KC_UP,  KC_DOWN,  KC_RGHT
+          COMM,   JB_REN,   KC_DEL,LT_NUM_GRV,      KC_LCTL,       KC_LSFT,  KC_LALT,      MO(SYMBOLS),   KC_ENT,   LT_MOD_SPC,        KC_LEFT,    KC_UP,  KC_DOWN,  KC_RGHT
   //└─────────┴─────────┴─────────┴─────────┘    └─────────┘    └─────────┴─────────┘       └─────────┴─────────┘   └─────────┘     └─────────┴─────────┴─────────┴─────────┘
   ),
 
