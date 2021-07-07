@@ -8,7 +8,7 @@
 
 #define LALT_GRV LALT_T(KC_GRV)
 #define LT_MOD_SPC LT(MODS, KC_SPC)
-#define JB_DOC LCTL(KC_1)
+#define JB_DOC LGUI(KC_J)
 #define JB_FUS LALT(KC_F7)
 #define COMM LCTL(KC_SLSH)
 #define JB_REN LSFT(KC_F6)
