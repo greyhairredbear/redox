@@ -150,9 +150,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐                                               ┌─────────┬─────────┬─────────┬─────────┬─────────┬─────────┐
        KC_TRNS,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,                                                    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
   //├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐                           ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-       KC_TRNS,  KC_NO,LCA(KC_BSPC),   KC_NO,    KC_NO,    KC_NO,    KC_NO,                                KC_NO,  KC_PGUP,    KC_NO,    KC_UP,    KC_NO,    KC_NO,    KC_NO,
+       KC_TRNS,  KC_NO,LCA(KC_BSPC),  WIN_TH,   WIN_FS,    KC_NO,    KC_NO,                                KC_NO,  KC_PGUP,    KC_NO,    KC_UP,    KC_NO,    KC_NO,    KC_NO,
   //├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                           ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-       KC_TRNS,    KC_NO,  KC_LGUI,  KC_LALT,  KC_LCTL,    KC_NO,  KC_BSPC,                              KC_BSPC,  KC_PGDN,  KC_LEFT,  KC_DOWN,  KC_RGHT,    KC_NO,    KC_NO,
+       KC_TRNS,   WINMVL,   WIN_LH,   WIN_BH,   WIN_RH,   WINMVR,  KC_BSPC,                              KC_BSPC,  KC_PGDN,  KC_LEFT,  KC_DOWN,  KC_RGHT,    KC_NO,    KC_NO,
   //├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐       ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
        KC_TRNS,    KC_NO,    KC_NO,    IT_CP,    KC_NO,    KC_NO,  KC_TRNS,  KC_TRNS,          KC_TRNS,  KC_TRNS,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
   //├─────────┼─────────┼─────────┼─────────┼────┬────┴────┬────┼─────────┼─────────┤       ├─────────┼─────────┼───┬─────┴───┬─────┼─────────┼─────────┼─────────┼─────────┤
