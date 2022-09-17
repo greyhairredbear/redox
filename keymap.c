@@ -13,6 +13,14 @@
 #define COMM LCTL(KC_SLSH)
 #define JB_REN LSFT(KC_F6)
 #define IT_CP LCTL(LSFT(KC_C))  // iterm copy mode
+#define WIN_LH LGUI(KC_LEFT)
+#define WIN_RH LGUI(KC_RGHT)
+#define WIN_TH LGUI(KC_UP)
+#define WIN_BH LGUI(KC_DOWN)
+#define WIN_FS LGUI(LSFT(KC_F))
+#define WIN_RS LGUI(LSFT(KC_R))
+#define WINMVL LGUI(LSFT(KC_LEFT))
+#define WINMVR LGUI(LSFT(KC_RGHT))
 
 // MOOM: gui+arrows -> half; gui+f/r -> fullscreen/resizes; gui+shft+l/r -> move to other screens
 
