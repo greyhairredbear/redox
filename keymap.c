@@ -12,6 +12,9 @@
 #define JB_FUS LALT(KC_F7)
 #define COMM LCTL(KC_SLSH)
 #define JB_REN LSFT(KC_F6)
+#define IT_CP LCTL(LSFT(KC_C))  // iterm copy mode
+
+// MOOM: gui+alt+arrows -> half; gui+alt+f/r -> fullscreen/resizes; gui+shft+l/r -> move to other screens
 
 enum custom_keycodes {
     DBL_EQUAL = SAFE_RANGE,
@@ -123,7 +126,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
  * |        |WIN_LS|WIN_LH|WIN_BH|WIN_RH|WIN_RS|      |           | BSpc | PGDN |   ◀  |   ▼  |   ▶  |      |        |
  * |--------+------+------+------+------+------|      |           |      |------+------+------+------+------+--------|
- * |        |      |      |      |      |      |      |           |      |      |      |      |      |      |        |
+ * |        |      |      | IT_CP|      |      |      |           |      |      |      |      |      |      |        |
  * `--------+------+------+------+------+-------------'           `-------------+------+------+------+------+--------'
  *   |      |      |      |      | LCTL |                                       |      |      |      |      |      |
  *   `----------------------------------'                                       `----------------------------------'
@@ -143,7 +146,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤                           ├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
        KC_TRNS,    KC_NO,  KC_LGUI,  KC_LALT,  KC_LCTL,    KC_NO,  KC_BSPC,                              KC_BSPC,  KC_PGDN,  KC_LEFT,  KC_DOWN,  KC_RGHT,    KC_NO,    KC_NO,
   //├─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┐       ┌─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┼─────────┤
-       KC_TRNS,    KC_NO,     KC_X,     KC_C,     KC_V,    KC_NO,  KC_TRNS,  KC_TRNS,          KC_TRNS,  KC_TRNS,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
+       KC_TRNS,    KC_NO,    KC_NO,    IT_CP,    KC_NO,    KC_NO,  KC_TRNS,  KC_TRNS,          KC_TRNS,  KC_TRNS,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,    KC_NO,
   //├─────────┼─────────┼─────────┼─────────┼────┬────┴────┬────┼─────────┼─────────┤       ├─────────┼─────────┼───┬─────┴───┬─────┼─────────┼─────────┼─────────┼─────────┤
        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS,       KC_TRNS,       KC_TRNS,  KC_TRNS,          KC_TRNS,  KC_TRNS,      KC_TRNS,        KC_TRNS,  KC_TRNS,  KC_TRNS,  KC_TRNS
   //└─────────┴─────────┴─────────┴─────────┘    └─────────┘    └─────────┴─────────┘       └─────────┴─────────┘   └─────────┘     └─────────┴─────────┴─────────┴─────────┘
