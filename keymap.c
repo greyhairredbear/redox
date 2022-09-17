@@ -14,7 +14,7 @@
 #define JB_REN LSFT(KC_F6)
 #define IT_CP LCTL(LSFT(KC_C))  // iterm copy mode
 
-// MOOM: gui+alt+arrows -> half; gui+alt+f/r -> fullscreen/resizes; gui+shft+l/r -> move to other screens
+// MOOM: gui+arrows -> half; gui+f/r -> fullscreen/resizes; gui+shft+l/r -> move to other screens
 
 enum custom_keycodes {
     DBL_EQUAL = SAFE_RANGE,
