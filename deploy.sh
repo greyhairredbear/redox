@@ -1,1 +1,1 @@
-cp -f keymap.c $1/keyboards/redox/keymaps/plaggner
+cp -f keymap.c $QMK_HOME/keyboards/redox/keymaps/plaggner
